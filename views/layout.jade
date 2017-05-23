@@ -1,0 +1,69 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml',ng-app="myApp")
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title dsiz Admin
+    // BOOTSTRAP STYLES
+    link(href='stylesheets/bootstrap.css', rel='stylesheet')
+    // FONTAWESOME STYLES
+    link(href='stylesheets/font-awesome.css', rel='stylesheet')
+    // CUSTOM STYLES
+    link(href='stylesheets/custom.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+    // GOOGLE FONTS
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
+  body(ng-controller="AppCtrl")
+    #wrapper
+      nav.navbar.navbar-default.navbar-default-custom.navbar-cls-top.navbar-cls-top-custom(role='navigation', style='margin-bottom: 0')
+        .navbar-header.navbar-header-custom
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.sidebar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand-logo(href='/dashboard')
+            img(src='images/dsinz-play-logo2.png', style='margin-top:6px;')
+        .logout-panel
+          a.btn.btn-danger.square-btn-adjust(href='/logout') Logout
+      // /. NAV TOP
+      nav.navbar-default.navbar-side(role='navigation')
+        .sidebar-collapse
+          ul#main-menu.nav
+            li
+              a.active-menu(href='/dashboard') Dashboard
+            li
+              a(href='/createorder') Create Order
+            li
+              a(href='/openorder') Open Order
+            li
+              a(href='/pendingorder') Pending Order
+            li
+              a(href='/completeorder') Completed Order
+            li
+              a(href='/bill') Bill
+            li
+              a(href='/newsletter') Send News Letter 
+      // /. NAV SIDE
+      #page-wrapper
+        #page-inner
+          // dashboard content
+          block content
+          // dashboard content
+          // /. PAGE INNER
+        // /. PAGE WRAPPER
+      // /. WRAPPER
+      // SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME
+      // JQUERY SCRIPTS
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+      script(src='javascripts/angular.min.js')
+      script(src='javascripts/angular.pagination.js')
+      script(src="controllers/controller.js")
+      script(src='javascripts/bootstrap.min.js')
+      script(src="javascripts/jquery-3.2.1.min.js")
+      // BOOTSTRAP SCRIPTS
+      script(src='javascripts/bootstrap.min.js')
+      // METISMENU SCRIPTS
+      script(src='javascripts/jquery.metisMenu.js')
+      // CUSTOM SCRIPTS
+      script(src='javascripts/custom.js')

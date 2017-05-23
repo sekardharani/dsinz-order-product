@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  .bill-tool
+    div
+      <i class="fa fa-envelope-o" style="right:0px;"></i>
+      <i class="fa fa-print" style="right:35px;"></i>
+  .headerContainer
+    .leftHeader
+      h1 INVOICE 
+    .rightHeader
+      <img src="images/dsinz-play-logo2.png">
+  .bill-container
+    .customerDetails
+      span.customerName Customer Name 
+      span Mobile Number
+      span Email ID
+    .invoiceDetails
+      div
+        label.leftLabel Invoice#
+        label.rightLabel 61d01
+      div
+        label.leftLabel Invoice Date
+        label.rightLabel 25/05/2017
+    .itemDetails
+      ul.itemDetailsTitle
+        li.sNo #
+        li.itemDescription ITEM
+        li.itemAmount 	AMOUNT
+      ul
+        li.sNo 1
+        li.itemDescription
+          span.itemTitle Brochure Design
+        li.itemAmount
+          span.itemTitle 300.00
+      ul
+        li.sNo 2
+        li.itemDescription
+          span.itemTitle Web Design Package - Basic
+        li.itemAmount
+          span.itemTitle 250.00
+      ul
+        li.sNo 3
+        li.itemDescription
+          span.itemTitle Print Ad - Basic - Color
+        li.itemAmount
+          span.itemTitle 80.00
+    .totalAmount
+      .greeting Thanks for your business
+      .amountDetails
+        div
+          label.amountLeftLable.amount Total
+          label.amount.amountRightLable 630.00
+

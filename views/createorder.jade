@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  .container-fluid(ng-controller="AppCtrl")
+    .row
+    .col-md-12
+      .panel.panel-default
+        .panel-heading
+          | Create Order
+        .panel-body
+          .row
+            .col-md-12
+              form(role='form')
+                .form-group
+                  label Name
+                  input.form-control(type='text', placeholder='PLease Enter Name',ng-model="name")
+                .form-group
+                  label Email
+                  input.form-control(type='text', placeholder='PLease Enter Email',ng-model='email')
+                .form-group
+                  label Mobile Number
+                  input.form-control(type='text', placeholder='PLease Enter Mobile Number',ng-model='phno')
+                .form-group
+                  label Service
+                  select.form-control(ng-model='service')
+                    option --Select--
+                    option HardWareIssue
+                    option OS_Upgrade
+                    option Not_rebooting
+                .form-group
+                  label Message
+                  textarea.form-control(rows='3',ng-model='msg')
+                button.btn.btn-danger(type='submit',ng-click="create_order()") Submit Button
+                button.btn.btn-default(type='reset') Reset Button
+             .form-group
+              .col-sm-10
+                 div(ng-bind="errors",style="color:red")
+              div(ng-bind="info",style="color:blue")

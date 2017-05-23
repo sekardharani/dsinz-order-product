@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .row
+  .col-md-3.col-sm-6.col-xs-6
+    .panel.panel-back.noti-box
+      span.icon-box.bg-color-red.set-icon
+        i.fa.fa-envelope-o
+      .text-box
+        p.main-text(ng-bind="open_orders_no")
+      p.text-muted.noti-status New Order
+  .col-md-3.col-sm-6.col-xs-6
+    .panel.panel-back.noti-box
+      span.icon-box.bg-color-blue.set-icon
+        i.fa.fa-bell-o
+      .text-box
+        p.main-text(ng-bind="pending_orders_no")
+      p.text-muted.noti-status Pending
+  .col-md-3.col-sm-6.col-xs-6
+    .panel.panel-back.noti-box
+      span.icon-box.bg-color-green.set-icon
+        i.fa.fa-bars
+      .text-box
+        p.main-text(ng-bind="completed_orders_no")
+      p.text-muted.noti-status Completed
+  .col-md-3.col-sm-6.col-xs-6
+    .panel.panel-back.noti-box
+      span.icon-box.bg-color-brown.set-icon
+        i.fa.fa-rocket
+      .text-box
+        p.main-text 3
+      p.text-muted.noti-status Enquire 
+

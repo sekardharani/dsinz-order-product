@@ -1,0 +1,101 @@
+/* bill styling start here */
+div.bill-tool{
+ overflow:hidden;
+ height:25px;
+}
+div.bill-tool div{
+ position:relative; 
+}
+div.bill-tool div .fa{
+ position:absolute;
+ font-size:25px;
+ color:#e10d0d;
+ cursor:pointer;
+}
+.headerContainer {
+	overflow:hidden;
+	height:50px;
+        border-bottom:solid 2px #323332;
+}
+.leftHeader, .rightHeader {
+	display:inline-block;
+}
+.leftHeader {
+	float:left;
+	color:#817D7D;
+}
+.leftHeader h1{
+margin-top:3px;
+}
+.rightHeader {
+	float:right;
+	color:#fff;
+	font-size:16px;
+}
+
+/*Invoice Bill Container*/
+.bill-container {
+	padding:5px;
+	color:#a29f9f;
+
+}
+.customerDetails, .invoiceDetails {display:inline-block;}
+.customerDetails span {
+	display:block;
+	margin-top:5px;
+}
+.customerDetails span.customerName {
+	font-weight:bold;
+	color:#333;
+	font-size:14px;
+}
+.invoiceDetails {
+	float:right;
+}
+.invoiceDetails label {
+	display:inline-block;
+	margin-top:10px;
+}
+.invoiceDetails .leftLabel {
+	text-align: right;
+	width:175px;
+	margin-right:20px;
+}
+.invoiceDetails .rightLabel {
+	color:#000;
+}
+.itemDetails {
+	margin-top:10px;
+	clear:right;
+	padding:10px;
+}
+.itemDetails li {
+	display:inline-block;
+	vertical-align: top;
+	padding: 10px 0px;
+}
+.itemDetails li span{
+	display:block;
+}
+.itemDetails li span.itemTitle {
+	font-weight: bold;
+	color:#333;
+}
+.itemDetailsTitle {
+	font-size:14px;
+	font-weight:bold;
+}
+.itemDetails ul {border-bottom:solid 1px #ccc;}
+.itemDetails li.sNo {width:20%;}
+.itemDetails li.itemDescription {width:60%;}
+.itemDetails li.itemAmount {width:20%; text-align: right}
+.totalAmount {margin-top:10px; color:#333; background:#e4e4e4; padding:10px; overflow: hidden}
+.greeting {float:left;}
+.amountDetails {float:right;}
+.totalAmount div label {display:inline-block; margin-top:10px;}
+.totalAmount div label.amountLeftLable {width:100px;}
+.totalAmount div label.amountRightLable {text-align: right; width:100px;}
+.amount {font-weight:bold;}
+.balDue .amount {font-weight:bold; font-size:14px;}
+
+/* bill styling end here */

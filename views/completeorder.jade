@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  .container-fluid(ng-controller="AppCtrl")
+      .row
+      .col-md-12
+        .panel.panel-default
+          .panel-heading
+            | Open Order
+          .panel-body
+            .row
+              .col-md-12
+                .order-table-filter
+                  form
+                    select.form-control(ng-model='pageSize')
+                      option 5
+                      option 10
+                      option 20
+                      option 30
+                      option 40
+                      option 50
+                    select.form-control(ng-model="actions",ng-change="update()")
+                      option Generate Bill
+                .order-table-search
+                  form
+                    .form-group.input-group
+                      input.form-control(type='text',ng-model='searchText')
+                      span.input-group-btn
+                        button.btn.btn-default(type='button')
+                          i.fa.fa-search
+                .table-responsive.order-table
+                  table.table.table-bordered.table-striped
+                    thead
+                      tr
+                        th
+                          input(type='checkbox', name='neworder')
+                        th Bill ID
+                        th Name
+                        th Email
+                        th Mobile
+                        th Service
+                    tbody(dir-paginate="order in complete_orders.order | filter:searchText | itemsPerPage: pageSize" current-page="currentPage")
+                      tr
+                        td
+                          input(type='checkbox',ng-model='order.checked',
+                          ng-true-value='true',ng-false-value='false')
+                        td 
+                          {{order._id.slice(-5)}}
+                        td
+                          {{order.name}}
+                        td
+                          {{order.email}}
+                        td
+                          {{order.phno}}
+                        td
+                          {{order.service}}
+                .text-center
+                  dir-pagination-controls(boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="dirPagination.tpl.html")
+

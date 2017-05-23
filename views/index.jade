@@ -1,0 +1,23 @@
+extends loginlayout
+
+block content
+   .form
+      .thumbnail
+        img(src='images/dsinz-play-logo.png')
+      .register-form.dsinz-form
+        form(method='post',action='/registeruser')  
+          input(type='text', placeholder='name', name="username", )
+          input(type='password', placeholder='password', name="password",)
+          input(type='text', placeholder='email address',name="email",)
+          button.dsinz-login(type='submit') create
+          p.message
+            | Already registered?
+            a(href='#') Sign In
+      .login-form.dsinz-form
+        form(method='post',action='/login')
+          input(type='text',name="username", placeholder='username')
+          input(type='password',name="password", placeholder='password')
+          button.dsinz-login(type='submit',value='login') Login
+          p.message
+            | Not registered?
+            a(href='#') Create an account
